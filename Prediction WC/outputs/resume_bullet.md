@@ -1,0 +1,1 @@
+Built a Python ML pipeline that predicted FIFA World Cup match probabilities and simulated the 48-team 2026 tournament 10,000 times, producing stage-by-stage advancement odds, champion probabilities, evaluation metrics, and portfolio-ready visualizations.
