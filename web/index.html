@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Cup 2026 Prediction Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>FIFA World Cup 2026 Prediction Dashboard</h1>
+      <p>
+        Interactive view of model outputs from the tournament simulation pipeline.
+      </p>
+    </header>
+
+    <main>
+      <section class="card" id="winner-card">
+        <h2>Most Likely Champion</h2>
+        <p id="winner-loading">Loading winner prediction...</p>
+        <div id="winner-content" class="hidden">
+          <p class="winner-team" id="winner-team"></p>
+          <p>
+            Champion probability:
+            <strong id="winner-probability"></strong>
+          </p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Top Champion Probabilities</h2>
+        <div class="table-wrapper">
+          <table id="champion-table">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Team</th>
+                <th>Champion Probability</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Team Stage Progression</h2>
+        <div class="table-wrapper">
+          <table id="stage-table">
+            <thead>
+              <tr>
+                <th>Team</th>
+                <th>Advance Group</th>
+                <th>Reach R16</th>
+                <th>Reach QF</th>
+                <th>Reach SF</th>
+                <th>Reach Final</th>
+                <th>Win World Cup</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Predicted Group-Stage Match Probabilities</h2>
+        <div class="table-wrapper">
+          <table id="group-table">
+            <thead>
+              <tr>
+                <th>Group</th>
+                <th>Home Team</th>
+                <th>Away Team</th>
+                <th>Home Win</th>
+                <th>Draw</th>
+                <th>Away Win</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card charts">
+        <h2>Model Output Visuals</h2>
+        <div class="chart-grid">
+          <figure>
+            <img src="../outputs/figures/model_evaluation.png" alt="Model evaluation chart" />
+            <figcaption>Model evaluation</figcaption>
+          </figure>
+          <figure>
+            <img src="../outputs/figures/champion_probabilities.png" alt="Champion probability chart" />
+            <figcaption>Top champion probabilities</figcaption>
+          </figure>
+          <figure>
+            <img src="../outputs/figures/stage_progression.png" alt="Stage progression chart" />
+            <figcaption>Stage progression probabilities</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Tip: run <code>python3 -m http.server</code> in the repository root and open
+        <code>http://localhost:8000/web/</code>.
+      </p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
