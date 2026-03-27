@@ -1,0 +1,107 @@
+:root {
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --text: #e2e8f0;
+  --accent: #38bdf8;
+  --muted: #94a3b8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.4;
+}
+
+header,
+footer {
+  padding: 1.25rem;
+  text-align: center;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2 {
+  margin-top: 0;
+}
+
+.winner-team {
+  color: var(--accent);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.hidden {
+  display: none;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.55rem;
+  border-bottom: 1px solid #334155;
+  text-align: left;
+  white-space: nowrap;
+}
+
+th {
+  color: var(--muted);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid #334155;
+}
+
+figcaption {
+  color: var(--muted);
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+code {
+  background: #0b1220;
+  color: #bfdbfe;
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.25rem;
+}
